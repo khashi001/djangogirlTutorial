@@ -25,8 +25,7 @@ SECRET_KEY = '27g&bmvz$*am*tmo_6**enm%=am@kqrcdgh@x4j86kc@krq8k@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['127.0.0.1', '.kumikoh.fun']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.kumikoh.fun']
 
 
 # Application definition
@@ -121,3 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Login 
+LOGIN_REDIRECT_URL = '/'
