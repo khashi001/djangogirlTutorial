@@ -25,7 +25,7 @@ SECRET_KEY = '27g&bmvz$*am*tmo_6**enm%=am@kqrcdgh@x4j86kc@krq8k@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.kumikoh.fun']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.kumikoh.fun','150.95.214.130']
 
 
 # Application definition
