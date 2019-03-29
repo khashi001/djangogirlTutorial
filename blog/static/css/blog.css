@@ -1,32 +1,126 @@
-h1 a {
-	color: #FCA205;
-	font-family: 'Lobster';
+.flexbox {
+  display: -webkit-box;   /* Chrome 4-20, Firefox 2-21, Safari 3.1-6.0 */
+  display: -webkit-flex;  /* Chrome 21-27 */
+  display: -moz-box;      /* Firefox 2-21 */
+  display: -ms-flexbox;   /* IE9 */
+  display: flex;
 }
-
+.inline-flexbox {
+  display: -webkit-inline-box;   /* Chrome 4-20, Safari 3.1-6.0 */
+  display: -webkit-inline-flex;  /* Chrome 21-27 */
+  display: -moz-inline-box;      /* Firefox 2-21 */
+  display: -ms-inline-flexbox;   /* IE9 */
+  display: inline-flex;
+}
 
 body {
+    color: #663333;
 	padding-left: 15px;
+	font-family: sans-serif,YuGothic;
+	background-color: #f3f0ed;
 }
 
+*,*:before, *:after {
+    box-sizing: border-box;
+}
 .page-header {
-    background-color: #ff9400;
+    width: 100%;
+    display: flex;
+    display: -ms-flexbox; /*IE10*/
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap; /*IE10*/
+}
+.page-header > div {
+/*    background-color:#ff9999; */
+    width: 33.3333%;
+    padding: 0px;
+    align-items: flex-end;
+    
+}
+
+.header-logo {
+    background-color:#558800;
+    text-align: left;
+}
+
+.header-menu {
+    background-color:#008899;
+    text-align: right;
+}
+
+.header-sns {
+    background-color:#9900ff;
+    text-align: right;
+    flex-shrink: 5;
+}
+@media screen and (max-width: 800px){
+    .page-header > div{
+        width: 100%;
+    }
+}
+    
+    /*
+.page-header {
+    background-color:#ff9999;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    overflow: hidden;
+}
+*/
+
+.page-header-logo {
+    margin-left: 10px;
+    margin-right: 100px;
+    max-width: 80%;
+    float: left;
+
+}
+.page-header-nav-item{
+    margin-left: 10px;
+    margin-right: 10px;
+/*    max-width: 35%;*/
+    float: right;
+}   
+
+
+.hi-iam-kumi {
+    padding: 40px 40px 40px 40px;
+	text-align:center;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+.iam-kumi-desc {
+    margin-top: -20px;
 }
 
-.content {
-    margin-left: 40px;
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+@media (max-width: 800px) {
+    .post-item {
+        flex: 0 0 33.3333&;
+        border: 1px solid gray;
+        background: white;
+        padding: 20px;
+        text-align: center;
+        max-width: 33.3333%;
+    }
 }
+
+h1 {
+    color: #663333;
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+p {
+    overflow:hidden;
+}
+
+
 
 .date {
     color: #828282;
