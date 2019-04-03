@@ -20,70 +20,54 @@ body {
 	background-color: #f3f0ed;
 }
 
-*,*:before, *:after {
-    box-sizing: border-box;
-}
 .page-header {
+    background-color:#ff9999;
     width: 100%;
     display: flex;
     display: -ms-flexbox; /*IE10*/
     flex-wrap: wrap;
     -ms-flex-wrap: wrap; /*IE10*/
-}
-.page-header > div {
-/*    background-color:#ff9999; */
-    width: 33.3333%;
-    padding: 0px;
-    align-items: flex-end;
-    
+    padding-top: 20px;
+    padding-left: 10px;
+    align-items: center; 
 }
 
 .header-logo {
-    background-color:#558800;
     text-align: left;
+    flex-grow: 3;
 }
 
 .header-menu {
-    background-color:#008899;
-    text-align: right;
+    text-align: center;
+    flex-grow: 6;
+    font-size: 1.5em;
+}
+.no-underline{
+    text-decoration: none;
+    color: #663333;
 }
 
+
 .header-sns {
-    background-color:#9900ff;
     text-align: right;
-    flex-shrink: 5;
+    flex-grow: 1;
 }
+
+.padding-right {
+    padding-right: 20px;
+}
+
 @media screen and (max-width: 800px){
     .page-header > div{
         width: 100%;
     }
 }
-    
-    /*
-.page-header {
-    background-color:#ff9999;
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    overflow: hidden;
+
+@media screen and (max-width: 500px){
+    .padding-right{
+        padding-right: 10px;
+    }
 }
-*/
-
-.page-header-logo {
-    margin-left: 10px;
-    margin-right: 100px;
-    max-width: 80%;
-    float: left;
-
-}
-.page-header-nav-item{
-    margin-left: 10px;
-    margin-right: 10px;
-/*    max-width: 35%;*/
-    float: right;
-}   
-
 
 .hi-iam-kumi {
     padding: 40px 40px 40px 40px;
@@ -95,36 +79,52 @@ body {
 }
 
 .post-list {
+    width: 100%;
     display: flex;
+    display: -ms-flexbox; /*IE10*/
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap; /*IE10*/
+    margin-top: 20px;
+    margin-right:auto;
+    margin-left:auto;
+    align-items: baseline;
 }
 
-@media (max-width: 800px) {
-    .post-item {
-        flex: 0 0 33.3333&;
-        border: 1px solid gray;
-        background: white;
-        padding: 20px;
-        text-align: center;
-        max-width: 33.3333%;
+@media screen and (max-width: 996px){
+    .post-list > div{
+        width: 100%;
     }
+}
+
+.img-postlist{
+    object-fit: cover;
+}
+
+.post-item {
+    width:30%;
+    text-align: center;
+    flex-grow: 1;
+    background-color: white;
+    margin: 10px;
+    overflow-wrap : break-word;
 }
 
 h1 {
     color: #663333;
     font-size: 2rem;
     letter-spacing: -1px;
+
 }
 
 p {
     overflow:hidden;
 }
 
-
-
-.date {
-    color: #828282;
+.word-break {
+        word-break: break-all;
 }
+
+/*
 
 .save {
     float: right;
@@ -148,4 +148,5 @@ p {
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
+*/
 

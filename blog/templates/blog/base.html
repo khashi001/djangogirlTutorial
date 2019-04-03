@@ -12,16 +12,16 @@
     <header>
     <div class="page-header">
         <div class="header-logo">
-            <h1><a href="/"><img src="{% static 'css/images/KumiHashimot.png' %}" alt="Kumi Hashimot" width="282" height="42"></a></h1>
+            <a href="/"><img src="{% static 'css/images/KumiHashimot.png' %}" alt="Kumi Hashimot" width="282" height="42"></a>
         </div>
-        <div class="header-menu">
-            <h2 >about/works/contact</h2>
-        </div>
+   <!--     <div class="header-menu">
+            <a href="/" class="padding-right no-underline">about</a>
+            <a href="/" class="padding-right no-underline">work</a>
+            <a href="/" class="padding-right no-underline">contact</a>
+        </div> -->
         <div class="header-sns">
-            <a href="https://twitter.com/CooMeCohHash" target="_blank" ><img src={% static 'css/images/Twitter_Logo_WhiteOnBlue.png' %} width="30" height="30"></a>
-
-            <a href="https://twitter.com/CooMeCohHash" target="_blank" ><img src={% static 'css/images/Twitter_Logo_WhiteOnBlue.png' %} width="30" height="30"></a>    
-
+            <a href="https://twitter.com/CooMeCohHash" target="_blank" class="padding-right"><img src={% static 'css/images/Twitter_Logo_WhiteOnBlue.png' %} width="30" height="30"></a>
+            <a href="https://www.instagram.com/kumikohashimot/" target="_blank" class="padding-right"><img src={% static 'css/images/Instagram_IG_Glyph_Fill.png' %} width="30" height="30"></a>
         </div>
     </div>
     </header>
@@ -32,13 +32,11 @@
 	<p class="iam-kumi-desc">Here are my digital works.</p>
 </div>
 
-	<div class="content container">
-		<div class="row">
-			<div class="post-list">
-			{% block content %}
-			{% endblock %}
-		</div>
-	</div>
+<div class="post-list">
+<!--    <div class="header-menu"> -->
+        {% block content %}
+        {% endblock %}
+<!--    </div> -->
+</div>
 </body>
 </html>
-
